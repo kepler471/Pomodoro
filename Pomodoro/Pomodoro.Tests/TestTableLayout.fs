@@ -26,7 +26,9 @@ type TableLayoutForm() as this =
         let sliderLabels = 
             [ "Set work interval"; "Set break interval"; "Set long break interval" ] 
             |> List.map (fun comment -> new Label(Text = comment))
-            |> List.map (fun label -> label.TextAlignment <- TextAlignment.Center)
+
+        // Can this be done in the sliderLabels assignment?
+        sliderLabels |> List.iter (fun label -> label.TextAlignment <- TextAlignment.Center)
 
         let layout = 
             new TableLayout(
