@@ -7,19 +7,27 @@ open Eto.Drawing
 type MainForm () as this =
     inherit Form()
     do
-        base.Title <- "My Eto Form"
-        base.ClientSize <- new Size(400, 350)
+        base.Title <- "Pomodoro Timer"
+        base.ClientSize <- new Size(300, 150)
 
-        // table with three rows
         let layout = new StackLayout()
-        layout.Items.Add(new StackLayoutItem(new Label(Text = "Hello World!")))
-        // Add more controls here
 
+        layout.Items.Add(new StackLayoutItem(new Label(Text = "Set work interval")))
+        layout.Items.Add(new StackLayoutItem(new Slider()))
+        layout.Items.Add(new StackLayoutItem(new Label(Text = "Set break interval")))
+        layout.Items.Add(new StackLayoutItem(new Slider()))
+        layout.Items.Add(new StackLayoutItem(new Label(Text = "Set long break interval")))
+        layout.Items.Add(new StackLayoutItem(new Slider()))
         base.Content <- layout;
 
-        // create a few commands that can be used for the menu and toolbar
-        let clickMe = new Command(MenuText = "Click Me!", ToolBarText = "Click Me!")
-        clickMe.Executed.Add(fun e -> MessageBox.Show(this, "I was clicked!") |> ignore)
+        let startPause = new Command(ToolBarText = "\u25B6")
+        let stop = new Command(ToolBarText = "\u23F9")
+        let reset = new Command(ToolBarText = "\u23EE")
+        let skip = new Command(ToolBarText = "\u23ED")
+        startPause.Executed.Add(fun e -> MessageBox.Show(this, "Pause/Play Timer") |> ignore)
+        stop.Executed.Add(fun e -> MessageBox.Show(this, "Stop timer") |> ignore)
+        reset.Executed.Add(fun e -> MessageBox.Show(this, "Restart the current session") |> ignore)
+        skip.Executed.Add(fun e -> MessageBox.Show(this, "Skip to end of current session") |> ignore)
 
         let quitCommand = new Command(MenuText = "Quit")
         quitCommand.Shortcut <- Application.Instance.CommonModifier ||| Keys.Q
@@ -33,19 +41,17 @@ type MainForm () as this =
 
         base.Menu <- new MenuBar()
         let fileItem = new ButtonMenuItem(Text = "&File")
-        fileItem.Items.Add(clickMe) |> ignore
-        base.Menu.Items.Add(fileItem)
-
-        (* add more menu items to the main menu...
-        let editItem = new ButtonMenuItem(Text = "&Edit")
-        base.Menu.Items.Add(editItem)
-        let viewItem = new ButtonMenuItem(Text = "&View")
-        base.Menu.Items.Add(viewItem)
-        *)
 
         base.Menu.ApplicationItems.Add(new ButtonMenuItem(Text = "&Preferences..."))
         base.Menu.QuitItem <- quitCommand.CreateMenuItem()
         base.Menu.AboutItem <- aboutCommand.CreateMenuItem()
 
         base.ToolBar <- new ToolBar()
-        base.ToolBar.Items.Add(clickMe)
+        base.ToolBar.Items.Add(startPause)
+        base.ToolBar.Items.Add(stop)
+        base.ToolBar.Items.Add(reset)
+        base.ToolBar.Items.Add(skip)
+        
+
+        
+        //this.ToolBar.Items.Add(new SeparatorToolItem())
