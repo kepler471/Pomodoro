@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Pomodoro", "Pomodoro.fsproj", "{4D1325A3-C7FB-4382-B5C8-CDD636748972}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Pomodoro", "Pomodoro\Pomodoro\Pomodoro.fsproj", "{0955FFD8-A2D6-45C8-9AA8-8DBD5C8AC877}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Pomodoro.Desktop", "Pomodoro\Pomodoro.Desktop\Pomodoro.Desktop.fsproj", "{7DDD0D6B-1DA5-4542-8618-2DFA3419AF2A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +13,19 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{4D1325A3-C7FB-4382-B5C8-CDD636748972}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4D1325A3-C7FB-4382-B5C8-CDD636748972}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4D1325A3-C7FB-4382-B5C8-CDD636748972}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4D1325A3-C7FB-4382-B5C8-CDD636748972}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0955FFD8-A2D6-45C8-9AA8-8DBD5C8AC877}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0955FFD8-A2D6-45C8-9AA8-8DBD5C8AC877}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0955FFD8-A2D6-45C8-9AA8-8DBD5C8AC877}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0955FFD8-A2D6-45C8-9AA8-8DBD5C8AC877}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DDD0D6B-1DA5-4542-8618-2DFA3419AF2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DDD0D6B-1DA5-4542-8618-2DFA3419AF2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DDD0D6B-1DA5-4542-8618-2DFA3419AF2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DDD0D6B-1DA5-4542-8618-2DFA3419AF2A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {6502C997-B4AB-4A6A-9BE2-098A4B85683B}
+		SolutionGuid = {D2C9E5FE-7FBF-47EB-A284-38CBCF1E29D3}
 	EndGlobalSection
 EndGlobal
