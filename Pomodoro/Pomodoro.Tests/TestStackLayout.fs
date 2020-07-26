@@ -4,7 +4,7 @@ open System
 open Eto.Forms
 open Eto.Drawing
 
-type TestStackLayoutForm () as this =
+type StackLayoutForm () as this =
     inherit Form()
     let textBoxName = new TextBox()
     let okButton = new Button(Text = "Ok")
