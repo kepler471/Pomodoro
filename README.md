@@ -1,5 +1,5 @@
 # Pomodoro
-A simple productivity timer for Windows. Inspired by the gnome-pomodoro shell extension
+A simple productivity timer for Windows. Inspired by the [gnome-pomodoro shell extension](https://gnomepomodoro.org/).
 
 The app will run as a tray icon application, and will create a full screen overlay when the user should take a break.
 
