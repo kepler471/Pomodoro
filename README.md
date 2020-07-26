@@ -9,16 +9,23 @@ Aiming for cross-platform but is currently tested for Windows only.
 
 
 
-kepler471/Pomodoro
+└── Pomodoro
 
     ├── Pomodoro
     │   ├── Pomodoro
+    │   │   ├── AnalogClock.fs
     │   │   ├── MainForm.fs
     │   │   └── Pomodoro.fsproj
-    │   └── Pomodoro.Desktop
-    │       ├── Info.plist
-    │       ├── MacIcon.icns
-    │       ├── Pomodoro.Desktop.fsproj
-    │       └── Program.fs
+    │   ├── Pomodoro.Desktop
+    │   │   ├── Info.plist
+    │   │   ├── MacIcon.icns
+    │   │   ├── Pomodoro.Desktop.fsproj
+    │   │   └── Program.fs
+    │   └── Pomodoro.Tests
+    │       ├── Pomodoro.Tests.fsproj
+    │       ├── Program.fs
+    │       ├── TestFormCommand.fs
+    │       ├── TestStackLayout.fs
+    │       └── TestTableLayout.fs
     ├── Pomodoro.sln
     └── README.md
