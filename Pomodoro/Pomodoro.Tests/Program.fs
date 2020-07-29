@@ -1,4 +1,4 @@
-namespace Pomodoro.Desktop
+namespace Pomodoro.Tests
 module Program =
 
     open System
@@ -8,6 +8,5 @@ module Program =
     [<STAThread>]
     let Main(args) = 
         let app = new Eto.Forms.Application(Eto.Platform.Detect)
-        
         app.Run(new TableLayoutForm())
         0
