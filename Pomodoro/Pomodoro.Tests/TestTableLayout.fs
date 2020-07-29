@@ -36,13 +36,24 @@ type TableLayoutForm() as this =
                 , Padding = Padding(20)
             )
         
-        //Table Structure
+        // Define Table Structure
         [
-            TableRow( [ playPause; stop; skip ] |> List.map TableCell )
-            TableRow( ScaleHeight = true )
-            TableRow( sliderLabels |> List.map TableCell )
-            TableRow( [ workInterval; shortBreak; longBreak ] |> List.map TableCell )
-            TableRow( ScaleHeight = true )
+            TableRow( 
+                // true in tuples assures equal column widths
+                [playPause, true; stop, true; skip, true ] |> List.map TableCell 
+            )
+            TableRow( 
+                ScaleHeight = true 
+            )
+            TableRow( 
+                sliderLabels |> List.map TableCell 
+            )
+            TableRow( 
+                [ workInterval; shortBreak; longBreak ] |> List.map TableCell 
+            )
+            TableRow( 
+                ScaleHeight = true 
+            )
         ] |> List.iter layout.Rows.Add
 
         base.Content <- layout
