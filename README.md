@@ -1,3 +1,7 @@
+# (WIP)
+
+Currently this does not have a timer implemented, the repo only includes some preliminary GUIs.
+
 # Pomodoro
 A simple productivity timer for Windows. Inspired by the [gnome-pomodoro shell extension](https://gnomepomodoro.org/).
 
@@ -29,3 +33,4 @@ Aiming for cross-platform but is currently tested for Windows only.
     │       └── TestTableLayout.fs
     ├── Pomodoro.sln
     └── README.md
+
